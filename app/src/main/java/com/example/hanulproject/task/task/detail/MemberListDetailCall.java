@@ -106,7 +106,7 @@ public class MemberListDetailCall extends AsyncTask<Void,Void, UserVO> {
             }else if (readStr.equals("phone")){
                 phone = reader.nextString();
                 vo.setPhone(phone);
-            }else if (readStr.equals("addr")){
+            }else if (readStr.equals("addrs")){
                 addr = reader.nextString();
                 vo.setAddr(addr);
             }else if (readStr.equals("id")){

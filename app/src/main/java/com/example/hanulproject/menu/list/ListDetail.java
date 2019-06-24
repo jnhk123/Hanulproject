@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.hanulproject.R;
@@ -21,6 +22,7 @@ public class ListDetail extends AppCompatActivity {
     UserVO vo;
     TextView id, pw, name, addr, email;
     ImageView profile;
+    LinearLayout pw_layout;
 
 
 
@@ -35,6 +37,7 @@ public class ListDetail extends AppCompatActivity {
         name=findViewById(R.id.uname);
         addr=findViewById(R.id.uaddr);
         email=findViewById(R.id.uemail);
+        pw_layout= findViewById(R.id.pw_layout);
 
         delete=findViewById(R.id.udelete);
         back=findViewById(R.id.back);
@@ -86,6 +89,7 @@ public class ListDetail extends AppCompatActivity {
         name.setText(vo.getName());
         addr.setText(vo.getAddr());
         email.setText(vo.getEmail());
+        pw_layout.setVisibility(View.GONE);
     }
 //리셋 메소드
     void reset(){
