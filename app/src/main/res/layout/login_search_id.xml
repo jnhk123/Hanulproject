@@ -110,7 +110,8 @@
         android:background="@drawable/btn_on"
         android:onClick="btnAddClicked"
         android:text="조회하기"
-        android:textColor="@color/basictxtcolor"
-        android:textSize="@dimen/btnSize" />
+        android:textColor="@color/titlecolor"
+        android:textSize="12dp"
+        android:textStyle="bold" />
 
 </LinearLayout>

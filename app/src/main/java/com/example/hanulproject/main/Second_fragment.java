@@ -1,9 +1,7 @@
 package com.example.hanulproject.main;
 
-import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -12,26 +10,17 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.hanulproject.MainActivity;
 import com.example.hanulproject.R;
-import com.example.hanulproject.main.statusTask.GetStatus;
-import com.example.hanulproject.main.statusTask.Light_on_off;
 import com.example.hanulproject.main.statusTask.StatusSelect;
-import com.example.hanulproject.main.statusTask.Window_on_off;
+import com.example.hanulproject.menu.status.HomeStatus.CallStatusValue;
 import com.example.hanulproject.menu.status.HomeStatus.HomeBoilerView;
-import com.example.hanulproject.menu.status.HomeStatus.HomeGasView;
 import com.example.hanulproject.menu.status.HomeStatus.HomeLightView;
 import com.example.hanulproject.menu.status.HomeStatus.HomeSecurityView;
-import com.example.hanulproject.menu.status.HomeStatus.HomeWaterView;
 import com.example.hanulproject.menu.status.HomeStatus.HomeWindowView;
 import com.example.hanulproject.vo.StatusVO;
 
@@ -44,7 +33,6 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
-import java.util.concurrent.ExecutionException;
 
 public class Second_fragment extends Fragment {
     // Store instance variables
@@ -90,6 +78,8 @@ public class Second_fragment extends Fragment {
 
     @Override
     public void onResume() {
+//        CallStatusValue callStatusValue = new CallStatusValue();
+//        callStatusValue.execute();
         dialog = new ProgressDialog(getActivity());
         dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         StatusSelect statusSelect = new StatusSelect();
@@ -116,10 +106,8 @@ public class Second_fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ViewGroup rootview = (ViewGroup) inflater.inflate(R.layout.main_fragment2, container, false);
-        water = rootview.findViewById(R.id.status_water);
         light = rootview.findViewById(R.id.status_light);
         secom = rootview.findViewById(R.id.status_secom);
-        gas = rootview.findViewById(R.id.status_gas);
         boiler = rootview.findViewById(R.id.status_boiler);
         window = rootview.findViewById(R.id.status_window);
         status=rootview.findViewById(R.id.status);
@@ -128,17 +116,10 @@ public class Second_fragment extends Fragment {
         offLight = rootview.findViewById(R.id.offLight);
         onLight.setVisibility(View.VISIBLE);
         offLight.setVisibility(View.GONE);
-        water.setVisibility(View.GONE);
-        gas.setVisibility(View.GONE);
+
 
         // 값을 아두이노로 보내고 싶을때는 senderThread 를 사용해서 매개변수로 값을 넘기면 됨
 
-        water.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getFragmentManager().beginTransaction().replace(R.id.status, new HomeWaterView()).commit();
-            }
-        });
         light.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -153,13 +134,7 @@ public class Second_fragment extends Fragment {
                 getFragmentManager().beginTransaction().replace(R.id.status, new HomeSecurityView()).commit();
             }
         });
-        gas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //구현함
-                getFragmentManager().beginTransaction().replace(R.id.status, new HomeGasView()).commit();
-            }
-        });
+
         boiler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

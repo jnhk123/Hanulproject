@@ -29,10 +29,10 @@
         <activity android:name=".intro.Intro">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- 메인화면 -->
+        </activity>
+        <!-- 메인화면 -->
         <activity
             android:name=".MainActivity"
             android:label="Hanulproject"

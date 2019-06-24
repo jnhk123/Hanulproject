@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginLeft="15dp"
+    android:layout_height="wrap_content"
     android:layout_marginBottom="10dp"
     android:orientation="vertical">
 
@@ -10,6 +9,7 @@
         android:id="@+id/uid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
         android:paddingLeft="5dp"
         android:text="예시입니다"
         android:textSize="14dp"
@@ -19,6 +19,7 @@
         android:id="@+id/uname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
         android:paddingLeft="5dp"
         android:paddingTop="3dp"
         android:text="예시입니다"

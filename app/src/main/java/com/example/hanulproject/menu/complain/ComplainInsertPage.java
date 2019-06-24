@@ -78,6 +78,19 @@ public class ComplainInsertPage extends AppCompatActivity {
                     cpicontent.requestFocus();
                     return;
                 }
+                if (isNetworkConnected(getApplication())==true){
+                    title = cpititle.getText().toString();
+                    content = cpicontent.getText().toString();
+                    Insert insert = new Insert(title, content, 2, uploadType, imageFilePathA, imageUploadPathA, uploadFileName);
+                    insert.execute();
+                    Intent resultIntent = new Intent();
+                    resultIntent.putExtra("result","result");
+                    setResult(RESULT_OK,resultIntent);
+                    finish();
+
+                }else{
+                    Toast.makeText(getApplication(), "인터넷이 연결되어 있지 않습니다.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -110,21 +123,7 @@ public class ComplainInsertPage extends AppCompatActivity {
         });
     }
 
-    public void btnAddClicked(View v){
-        if (isNetworkConnected(this)==true){
-            title = cpititle.getText().toString();
-            content = cpicontent.getText().toString();
-            Insert insert = new Insert(title, content, 2, uploadType, imageFilePathA, imageUploadPathA, uploadFileName);
-            insert.execute();
-            Intent resultIntent = new Intent();
-            resultIntent.putExtra("result","result");
-            setResult(RESULT_OK,resultIntent);
-            finish();
 
-        }else{
-            Toast.makeText(this, "인터넷이 연결되어 있지 않습니다.", Toast.LENGTH_SHORT).show();
-        }
-    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {

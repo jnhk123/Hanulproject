@@ -53,27 +53,16 @@
                     style="@style/title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="10dp"
                     android:text="게시판 제목" />
             </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#cccccc"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right">
 
-                <TextView
-                    style="@style/content"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:background="#ffffff"
-                    android:text="작성자 : " />
+
 
                 <TextView
                     android:id="@+id/cmdwriter"
@@ -102,14 +91,14 @@
 
                 <Button
                     android:id="@+id/modify"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/modify_b" />
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/modify" />
 
                 <Button
                     android:id="@+id/delete"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_marginLeft="5dp"
                     android:background="@drawable/cancel_b" />
             </LinearLayout>
@@ -190,13 +179,14 @@
 
                         <Button
                             android:id="@+id/cmmd_cmt_insert"
-                            android:layout_width="50dp"
+                            android:layout_width="45dp"
                             android:layout_height="30dp"
                             android:layout_marginLeft="10dp"
                             android:background="@drawable/btn_on"
-                            android:text="등록"
-                            android:textColor="@color/basictxtcolor"
-                            android:textSize="12dp" />
+                            android:text="등 록"
+                            android:textColor="@color/titlecolor"
+                            android:textSize="11dp"
+                            android:textStyle="bold"/>
                         <Button
                             android:id="@+id/cmdRefresh"
                             android:layout_width="20dp"

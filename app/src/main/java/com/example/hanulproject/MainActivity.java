@@ -259,9 +259,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             intent.putExtra("selectKey", 5);
             startActivity(intent);
         } else if(id == R.id.nav_logout){
-            LoginRequest.vo.setClear(); //로그아웃시 모든 기록을 삭제시켜주는 메소드
             TokenLogout tokenLogout = new TokenLogout(LoginRequest.vo.getId());
             tokenLogout.execute();
+            LoginRequest.vo.setClear(); //로그아웃시 모든 기록을 삭제시켜주는 메소드
             logout_check = true;
             save(false);
             intent = new Intent(MainActivity.this, Login_menu.class);

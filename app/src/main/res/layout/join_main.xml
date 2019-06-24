@@ -40,32 +40,35 @@
         android:layout_marginTop="30dp"
         android:orientation="vertical"
         android:weightSum="4">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <TextView
-                android:layout_width="100dp"
+                android:layout_width="90dp"
                 android:layout_height="wrap_content"
                 android:text="이름"
                 android:textColor="@color/basictxtcolor"
                 android:textSize="@dimen/contentSize" />
+
             <EditText
                 android:id="@+id/joinName"
-                android:layout_width="250dp"
+                android:layout_width="230dp"
                 android:layout_height="50dp"
-                android:textSize="@dimen/contentSize"/>
+                android:textSize="@dimen/contentSize" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <TextView
-                android:layout_width="100dp"
+                android:layout_width="90dp"
                 android:layout_height="wrap_content"
                 android:text="아이디"
                 android:textColor="@color/basictxtcolor"
@@ -73,20 +76,22 @@
 
             <EditText
                 android:id="@+id/joinId"
-                android:layout_width="180dp"
+                android:layout_width="160dp"
                 android:layout_height="50dp"
                 android:hint="소문자와 숫자를 입력해주세요"
                 android:textSize="@dimen/contentSize" />
 
             <Button
                 android:id="@+id/idcheck"
-                android:layout_width="75dp"
+                android:layout_width="73dp"
                 android:layout_height="30dp"
                 android:background="@drawable/btn_on"
                 android:text="중복확인"
-                android:textColor="@color/basictxtcolor"
-                android:textSize="14sp" />
+                android:textColor="@color/titlecolor"
+                android:textSize="11dp"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -100,7 +105,7 @@
                 android:text="사용가능한 아이디입니다."
                 android:textColor="@color/complete"
                 android:textSize="13dp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
         </LinearLayout>
 
@@ -108,6 +113,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center">
+
             <TextView
                 android:id="@+id/idfail"
                 android:layout_width="match_parent"
@@ -116,35 +122,37 @@
                 android:text="중복된 아이디가 존재합니다."
                 android:textColor="@color/error"
                 android:textSize="13dp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <TextView
-                android:layout_width="100dp"
+                android:layout_width="90dp"
                 android:layout_height="wrap_content"
                 android:text="이메일"
                 android:textColor="@color/basictxtcolor"
                 android:textSize="@dimen/contentSize" />
+
             <EditText
                 android:id="@+id/joinEmail"
-                android:layout_width="250dp"
+                android:layout_width="230dp"
                 android:layout_height="50dp"
-                android:textSize="@dimen/contentSize"/>
+                android:textSize="@dimen/contentSize" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <TextView
-                android:layout_width="100dp"
+                android:layout_width="90dp"
                 android:layout_height="wrap_content"
                 android:text="비밀번호"
                 android:textColor="@color/basictxtcolor"
@@ -152,31 +160,34 @@
 
             <EditText
                 android:id="@+id/joinPw"
-                android:layout_width="250dp"
+                android:layout_width="230dp"
                 android:layout_height="50dp"
-                android:hint="대소문자와 특수문자를 포함시켜주세요."
+                android:hint="영소문자와 숫자를 입력해주세요"
                 android:inputType="textPassword"
                 android:textSize="@dimen/contentSize" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <TextView
-                android:layout_width="100dp"
+                android:layout_width="90dp"
                 android:layout_height="wrap_content"
                 android:text="비밀번호 확인"
                 android:textColor="@color/basictxtcolor"
                 android:textSize="@dimen/contentSize" />
+
             <EditText
                 android:id="@+id/joinPwr"
-                android:layout_width="250dp"
+                android:layout_width="230dp"
                 android:layout_height="50dp"
-                android:textSize="@dimen/contentSize"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textSize="@dimen/contentSize" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -190,7 +201,7 @@
                 android:text="비밀번호가 일치합니다."
                 android:textColor="@color/complete"
                 android:textSize="13dp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
         </LinearLayout>
 
@@ -207,7 +218,7 @@
                 android:text="비밀번호 불일치합니다."
                 android:textColor="@color/error"
                 android:textSize="13dp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
@@ -242,8 +253,9 @@
         android:layout_height="40dp"
         android:layout_gravity="center"
         android:background="@drawable/btn_gray"
-        android:text="가입하기"
-        android:textColor="@color/black"
-        android:textSize="@dimen/btnSize" />
+        android:text="가입 하기"
+        android:textColor="@color/titlecolor"
+        android:textSize="11dp"
+        android:textStyle="bold" />
 
 </LinearLayout>

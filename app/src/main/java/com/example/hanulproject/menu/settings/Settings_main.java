@@ -21,12 +21,15 @@ import com.example.hanulproject.firebase.TokenSettingAll;
 import com.example.hanulproject.login.LoginRequest;
 import com.example.hanulproject.login.Member_modify;
 import com.example.hanulproject.menu.Menu_main;
+import com.example.hanulproject.menu.status.CheckStatusWindowAuto;
+import com.example.hanulproject.menu.status.StatusWindowAuto;
 
 public class Settings_main extends Fragment {
     Menu_main activity;
     TextView memberModify;
     Switch commentPush;
     Switch allPush;
+    Switch autoWindow;
 
     boolean on = false; // 최초 실행시 버튼 체인지 막음
 
@@ -46,6 +49,7 @@ public class Settings_main extends Fragment {
     public void onResume() {
         super.onResume();
 
+        autoWindow();
         commentCheck();
         allCheck();
         on = true;
@@ -58,6 +62,7 @@ public class Settings_main extends Fragment {
         memberModify = rootView.findViewById(R.id.memberModify);
         commentPush = rootView.findViewById(R.id.commentPush);
         allPush = rootView.findViewById(R.id.allPush);
+        autoWindow = rootView.findViewById(R.id.autoWindow);
 
         if(LoginRequest.vo.isLogintype()){
             memberModify.setVisibility(View.VISIBLE);
@@ -89,6 +94,16 @@ public class Settings_main extends Fragment {
                 if(on){
                     TokenSettingAll tokenSettingAll = new TokenSettingAll(LoginRequest.vo.getId());
                     tokenSettingAll.execute();
+                }
+            }
+        });
+
+        autoWindow.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(on){
+                    StatusWindowAuto statusWindowAuto = new StatusWindowAuto(LoginRequest.vo.getId());
+                    statusWindowAuto.execute();
                 }
             }
         });
@@ -127,6 +142,22 @@ public class Settings_main extends Fragment {
             allPush.setChecked(true);
         }else{
             allPush.setChecked(false);
+        }
+    }
+
+    private void autoWindow(){
+        boolean check = true;
+
+        CheckStatusWindowAuto checkStatusWindowAuto = new CheckStatusWindowAuto();
+        try {
+            check = checkStatusWindowAuto.execute().get();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        if(check){
+            autoWindow.setChecked(true);
+        }else{
+            autoWindow.setChecked(false);
         }
     }
 }

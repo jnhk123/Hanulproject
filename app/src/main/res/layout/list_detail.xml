@@ -188,9 +188,10 @@
                     android:layout_height="30dp"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/btn_on"
-                    android:text="탈퇴"
-                    android:textColor="@color/basictxtcolor"
-                    android:textSize="15dp" />
+                    android:text="탈 퇴"
+                    android:textColor="@color/titlecolor"
+                    android:textSize="11dp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

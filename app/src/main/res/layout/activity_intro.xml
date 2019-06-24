@@ -36,7 +36,7 @@
             android:layout_marginTop="40dp"
             android:max="100"
             android:progress="0"
-            android:progressTint="#4d7dd6" />
+            android:progressTint="#1a8ed4" />
     </LinearLayout>
 
     <LinearLayout

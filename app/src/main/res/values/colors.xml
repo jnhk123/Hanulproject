@@ -5,12 +5,12 @@
     <color name="colorAccent">#82baff</color>
 
     <color name="titlecolor">#ffffff</color>
-    <color name="basictxtcolor">#224040</color>
-    <color name="titlebarcolor">#82b1d8</color>
+    <color name="basictxtcolor">#0e2a49</color>
+    <color name="titlebarcolor">#5ea3f1</color>
 
     <color name="allbackg">#F0F0F0</color>
-    <color name="onBtnColor">#82baff</color>
-    <color name="offBtnColor">#4d4d4d</color>
+    <color name="onBtnColor">#fe6085</color>
+    <color name="offBtnColor">#f3b0c0</color>
     <color name="black">#000000</color>
 
     <color name="complete">#00c100</color>

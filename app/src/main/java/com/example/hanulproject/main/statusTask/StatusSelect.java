@@ -97,7 +97,7 @@ public class StatusSelect extends AsyncTask<Void,Void, StatusVO> {
     }
 
     public StatusVO ReadMessage(JsonReader reader) throws IOException{
-        String id = "", light = "", secure = "", weather = "", window = "", boiler = "", gas="", door="";
+        String id = "", light = "", secure = "", weather = "", window = "", boiler = "", gas="", door="", autoWindow="";
         int water = 0, temper = 0, dust = 0;
 
         while (reader.hasNext()){
@@ -124,6 +124,8 @@ public class StatusSelect extends AsyncTask<Void,Void, StatusVO> {
                 gas = reader.nextString();
             }else if (readStr.equals("door")){
                 door = reader.nextString();
+            }else if (readStr.equals("autoWindow")){
+                autoWindow = reader.nextString();
             }else{
                 reader.skipValue();
             }
@@ -131,9 +133,9 @@ public class StatusSelect extends AsyncTask<Void,Void, StatusVO> {
 
         reader.endObject();
 
-        Log.d("status" , id + light + secure + weather + water + temper + dust);
+        Log.d("status" , id + light + secure + weather + water + temper + dust + window + boiler + gas + door + autoWindow);
 
-        return new StatusVO(id, light, secure, weather, water, temper, dust, window, boiler, gas, door);
+        return new StatusVO(id, light, secure, weather, water, temper, dust, window, boiler, gas, door, autoWindow);
     }
 
 }

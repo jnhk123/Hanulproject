@@ -93,13 +93,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
         android:gravity="right">
 
         <Button
             android:id="@+id/btnPhotoLoad"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:background="@drawable/imageadd"
             android:textColor="@color/basictxtcolor" />
 
@@ -110,10 +109,10 @@
 
         <Button
             android:id="@+id/btnPhotoDelete"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@drawable/imagedelete"
-            android:textColor="@color/basictxtcolor" />
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/imagedelete"/>
 
     </LinearLayout>
 
@@ -127,23 +126,24 @@
 
         <Button
             android:id="@+id/insert"
-            android:layout_width="70dp"
+            android:layout_width="60dp"
             android:layout_height="30dp"
             android:background="@drawable/btn_on"
-            android:onClick="btnAddClicked"
-            android:text="등록"
-            android:textColor="@color/basictxtcolor"
-            android:textSize="15dp" />
+            android:text="등 록"
+            android:textColor="@color/titlecolor"
+            android:textSize="11dp"
+            android:textStyle="bold"/>
 
         <Button
             android:id="@+id/cancel"
-            android:layout_width="70dp"
+            android:layout_width="60dp"
             android:layout_height="30dp"
             android:layout_marginLeft="5dp"
             android:background="@drawable/btn_gray"
-            android:text="취소"
-            android:textColor="@color/basictxtcolor"
-            android:textSize="15dp" />
+            android:text="취 소"
+            android:textColor="@color/titlecolor"
+            android:textSize="11dp"
+            android:textStyle="bold"/>
     </LinearLayout>
 
 

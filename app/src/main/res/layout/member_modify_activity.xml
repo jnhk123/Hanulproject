@@ -59,7 +59,9 @@
             android:layout_height="30dp"
             android:background="@drawable/btn_on"
             android:text="사진변경"
-            android:textColor="@color/basictxtcolor" />
+            android:textColor="@color/titlecolor"
+            android:textSize="11dp"
+            android:textStyle="bold"/>
 
         <Button
             android:id="@+id/modify_photoDelete"
@@ -68,7 +70,9 @@
             android:layout_marginLeft="10dp"
             android:background="@drawable/btn_gray"
             android:text="사진삭제"
-            android:textColor="@color/basictxtcolor" />
+            android:textColor="@color/titlecolor"
+            android:textSize="11dp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -208,12 +212,13 @@
 
         <Button
             android:id="@+id/memberModify_update"
-            android:layout_width="70dp"
+            android:layout_width="60dp"
             android:layout_height="30dp"
             android:background="@drawable/btn_on"
-            android:text="등록"
-            android:textColor="@color/basictxtcolor"
-            android:textSize="13dp" />
+            android:text="등 록"
+            android:textColor="@color/titlecolor"
+            android:textSize="11dp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 

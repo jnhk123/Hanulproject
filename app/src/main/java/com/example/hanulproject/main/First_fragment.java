@@ -76,6 +76,7 @@ public class First_fragment extends Fragment implements Serializable {
     MyhomeAdapter adapter;
 
 
+    //집 리스트 조회처리
     private void myHomelist (ListView listView2){
         activity = (MainActivity) getActivity();
         adapter = new MyhomeAdapter(getActivity(), R.layout.main_my_home_list_view, hlist);
@@ -172,10 +173,6 @@ public class First_fragment extends Fragment implements Serializable {
 
         return view;
     }
-
-
-
-    //집 리스트 조회처리
 
     public void getweather(double x, double y){
         //위경도 기상청용 xy로 변환

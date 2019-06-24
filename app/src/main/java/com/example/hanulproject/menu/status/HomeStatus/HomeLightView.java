@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.hanulproject.R;
 import com.example.hanulproject.main.Second_fragment;
@@ -34,23 +35,35 @@ public class HomeLightView extends Fragment {
         on = rootview.findViewById(R.id.onlight);
         off = rootview.findViewById(R.id.offlight);
 
+
         on.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Light_on_off light_on_off = new Light_on_off(Second_fragment.dialog);
-                light_on_off.execute();
+                Log.d("statusTest",vo.getAutoWindow());
+                if(vo.getAutoWindow().equals("N")) {
+                    Light_on_off light_on_off = new Light_on_off(Second_fragment.dialog);
+                    light_on_off.execute();
 
-                status_refresh();
+                    status_refresh();
+                }else{
+                    Toast.makeText(getContext(), "집 감지모드를 Off 해주세요", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
         off.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Light_on_off light_on_off = new Light_on_off(Second_fragment.dialog);
-                light_on_off.execute();
+                Log.d("statusTest",vo.getAutoWindow());
+                if(vo.getAutoWindow().equals("N")) {
+                    Light_on_off light_on_off = new Light_on_off(Second_fragment.dialog);
+                    light_on_off.execute();
 
-                status_refresh();
+                    status_refresh();
+                }else{
+                    Toast.makeText(getContext(), "집 감지모드를 Off 해주세요", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 

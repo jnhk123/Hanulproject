@@ -4,10 +4,12 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.hanulproject.R;
 import com.example.hanulproject.main.Second_fragment;
@@ -35,20 +37,32 @@ public class HomeBoilerView extends Fragment {
         offBoiler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Boiler_on_off boiler_on_off = new Boiler_on_off(Second_fragment.dialog);
-                boiler_on_off.execute();
+                Log.d("statusTest",vo.getAutoWindow());
+                if(vo.getAutoWindow().equals("N")) {
+                    Boiler_on_off boiler_on_off = new Boiler_on_off(Second_fragment.dialog);
+                    boiler_on_off.execute();
 
-                status_refresh();
+                    status_refresh();
+                }else{
+                    Toast.makeText(getContext(), "집 감지모드를 Off 해주세요", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 
         onBoiler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Boiler_on_off boiler_on_off = new Boiler_on_off(Second_fragment.dialog);
-                boiler_on_off.execute();
+                Log.d("statusTest",vo.getAutoWindow());
+                if(vo.getAutoWindow().equals("N")) {
+                    Boiler_on_off boiler_on_off = new Boiler_on_off(Second_fragment.dialog);
+                    boiler_on_off.execute();
 
-                status_refresh();
+                    status_refresh();
+                }else{
+                    Toast.makeText(getContext(), "집 감지모드를 Off 해주세요", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 

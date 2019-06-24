@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.hanulproject.R;
 import com.example.hanulproject.main.Second_fragment;
@@ -40,20 +41,30 @@ public class HomeWindowView extends Fragment {
         onWindow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Window_on_off window_on_off = new Window_on_off(Second_fragment.dialog,1 );
-                window_on_off.execute();
+                Log.d("statusTest",vo.getAutoWindow());
+                if(vo.getAutoWindow().equals("N")) {
+                    Window_on_off window_on_off = new Window_on_off(Second_fragment.dialog,1 );
+                    window_on_off.execute();
 
-                status_refresh();
+                    status_refresh();
+                }else{
+                    Toast.makeText(getContext(), "집 감지모드를 Off 해주세요", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
         offWindow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Window_on_off window_on_off = new Window_on_off(Second_fragment.dialog,2 );
-                window_on_off.execute();
+                Log.d("statusTest",vo.getAutoWindow());
+                if(vo.getAutoWindow().equals("N")) {
+                    Window_on_off window_on_off = new Window_on_off(Second_fragment.dialog,2 );
+                    window_on_off.execute();
 
-                status_refresh();
+                    status_refresh();
+                }else{
+                    Toast.makeText(getContext(), "집 감지모드를 Off 해주세요", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

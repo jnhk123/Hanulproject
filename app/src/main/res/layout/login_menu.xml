@@ -27,7 +27,9 @@
         android:layout_marginRight="50dp"
         android:background="@drawable/btn_on"
         android:text="@string/login"
-        android:textColor="@color/basictxtcolor" />
+        android:textColor="@color/titlecolor"
+        android:textSize="12dp"
+        android:textStyle="bold" />
 
 
     <FrameLayout
