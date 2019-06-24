@@ -215,8 +215,6 @@ public class Member_modify extends AppCompatActivity {
                 is_check = true;
                 LoginRequest.vo.setName(modify_name.getText().toString());
                 finish();
-
-
             }
         });
     }

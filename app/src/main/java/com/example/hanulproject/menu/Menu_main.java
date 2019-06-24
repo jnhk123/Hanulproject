@@ -27,8 +27,6 @@ public class Menu_main extends AppCompatActivity {
     Button back;
     TextView bartext;
 
-
-
     @Override
     public void onBackPressed() {
         finish();
